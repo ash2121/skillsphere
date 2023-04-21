@@ -1,0 +1,30 @@
+pubspec.yaml is for downloading your resources from internet like 3rd party packages
+
+State is a class actually
+
+on is a general method
+on method takes a type of event
+on<event_class_name>((event, emit){});
+
+Emitter callable class:
+>we call emit to release state for ui where we say that our ui has changed
+>we can call it anything, no need to call it only emit
+> emit is an instance of Emitter class which is a callable class
+>emit is called like a function
+>we can call this class just like a function because inside this class we have a call method
+
+welcome.dart -> ui 
+bloc -> business logic
+starting with welcome.dart or ui
+
+
+if multiple floating vuttons are present, we can give them different heroTags to differentiate
+
+if you have multiple blocProviders, one only will be created immediately and generally it is the first one in the list of blocProviders. We can overide this : set lazy = false. Generate as soon as possible. Using lazy, we can create particular blocs first. this is memory efficient.
+
+pushAndRemoveUntil ---> keep removing all the routes until u hit the mentioned one. Also required to mention routes property in homepage --> used here for onboarding screens
+
+
+we use classes as events and not varibles or methods
+
+we need to have abstract class as event class so that it can be extended by another class
