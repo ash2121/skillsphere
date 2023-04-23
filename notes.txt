@@ -28,3 +28,13 @@ pushAndRemoveUntil ---> keep removing all the routes until u hit the mentioned o
 we use classes as events and not varibles or methods
 
 we need to have abstract class as event class so that it can be extended by another class
+
+calling Emitter class as a function (emit) as it is callable -> calling a class as function
+
+on method takes a type of class and a handler
+
+FirebaseAuth is a singleton class
+the instance is a getter si it gives an app instance. so in the entire app you have one instance
+In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time. After the first time, if we try to instantiate the Java Singleton classes, the new variable also points to the first instance created.
+
+singleton class constructors have a _ before dot

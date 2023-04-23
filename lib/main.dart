@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -5,7 +6,11 @@ import 'package:skillsphere/pages/sign_in/sign_in.dart';
 import 'package:skillsphere/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:skillsphere/pages/welcome/welcome.dart';
 
-void main() {
+import 'pages/sign_in/bloc/signin_blocs.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -21,6 +26,9 @@ class MyApp extends StatelessWidget {
           // injecting bloc
           create: (context) => WelcomeBloc(),
         ),
+        BlocProvider(
+          create: (context) => SignInBloc(),
+        )
       ],
       child: ScreenUtilInit(
         builder: (context, child) => MaterialApp(
